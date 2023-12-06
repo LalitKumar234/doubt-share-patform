@@ -12,7 +12,7 @@ import Teacher from './pages/Teacher'
 
 function App() {
   const [isLoggedIn, setIsLoggedIn] = useState(localStorage.getItem('isLoggedIn') || false)
-  const [role, setRole] = useState(backendConfig?.userDetails?.role || '')
+  const [role, setRole] = useState(backendConfig.userDetails?.role || '')
   const navigate = useNavigate()
 
   useEffect(() => {

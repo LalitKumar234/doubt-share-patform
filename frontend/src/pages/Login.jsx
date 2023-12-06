@@ -28,17 +28,17 @@ const Login = ({ setRole }) => {
     axios.post(`${backendConfig.baseUrl}auth/login`, userDetails)
       .then((res) => {
         console.log(res.data)
+        setRole(res.data.user.role)
+        res.data.user.role === "teacher" ? navigate('/teacher') : navigate('/student')
         localStorage.setItem('userDetails', JSON.stringify({
-          email: res.data.user?.email,
-          role: res.data.user?.role,
+          email: res.data.user.email,
+          role: res.data.user.role,
           username: res.data.user?.username,
           token: res.data.tokens.access.token,
           language: res.data.user?.language,
           teacherDetails: { subjectsAllowed: res.data.user.role === "teacher" ? res.data.user.subjectsAllowed : null }
         }))
         localStorage.setItem('isLoggedIn', true)
-        setRole(res.data.user?.role)
-        res.data.user.role === "teacher" ? navigate('/teacher') : navigate('/student')
       })
       .catch((err) => {
         console.log(err.request.status, 'error')

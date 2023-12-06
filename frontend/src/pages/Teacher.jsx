@@ -50,8 +50,8 @@ const Teacher = () => {
             },
         }).then((res) => {
             console.log(res.data)
-            const doubtJustRecieved = res.data.matchingDoubts.filter((doubt) => doubt.isResolved === false)
-            setRecentDoubt(doubtJustRecieved)
+            // const doubtJustRecieved = res.data.matchingDoubts.filter((doubt) => doubt.isResolved === false)
+            setRecentDoubt(res.data.matchingDoubts)
         }).catch((err) => {
             console.log(err.response.data)
             toast({
@@ -70,9 +70,6 @@ const Teacher = () => {
         const intervalId = setInterval(() => {
             getDoubtNotification()
             console.log('api called')
-            recentDoubt.length > 0 && toast({
-                description: "You have some doubts to resolve",
-            })
         }, pollingInterval)
         return () => clearInterval(intervalId);
 
@@ -91,18 +88,21 @@ const Teacher = () => {
                         </p>
                     </div>
                 </div>
-                {
-                    recentDoubt.length !== 0 && recentDoubt.map((doubt) =>
-                        <Card key={doubt._id} className="p-3 shadow-sm mt-5 text-muted-foreground border rounded-md flex justify-between items-center">
-                            <div>
-                                <h2 className='text-primary font-semibold'>
-                                    {doubt.doubtTitle}
-                                </h2>
-                                <p className='text-sm'>{doubt.doubtContent}</p>
-                            </div>
-                            <Button onClick={() => handleResolve(doubt._id)}>Resolve This doubt</Button>
-                        </Card>)
-                }
+                {recentDoubt.length === 0 ? <>
+                    {
+                        recentDoubt.map((doubt) =>
+                            <Card key={doubt._id} className="p-3 shadow-sm mt-5 text-muted-foreground border rounded-md flex justify-between items-center">
+                                <div>
+                                    <h2 className='text-primary font-semibold'>
+                                        {doubt.doubtTitle}
+                                    </h2>
+                                    <p className='text-sm'>{doubt.doubtContent}</p>
+                                </div>
+                                <Button onClick={() => handleResolve(doubt._id)}>Resolve This doubt</Button>
+                            </Card>)
+                    }
+                </> : <div className='w-full text-center'><h1 className='font-medium text-lg'>You have no doubts to resolve</h1></div>}
+
             </div>
         </div>
     )

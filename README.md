@@ -47,4 +47,5 @@ DoubtSharing is an application designed to facilitate efficient communication be
 4. Start the server: `npm run dev` (backend)
 5. Start the client: `npm run dev` (frontend)
 
+## Some Screenshots
 
