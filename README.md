@@ -1,4 +1,5 @@
-# DoubtSharing App ![MongoDB](https://img.shields.io/badge/MongoDB-%234ea94b.svg?style=for-the-badge&logo=mongodb&logoColor=white)
+# DoubtSharing App
+![React](https://img.shields.io/badge/react-%2320232a.svg?style=for-the-badge&logo=react&logoColor=%2361DAFB) ![MongoDB](https://img.shields.io/badge/MongoDB-%234ea94b.svg?style=for-the-badge&logo=mongodb&logoColor=white)
 
 DoubtSharing is an application designed to facilitate efficient communication between students and tutors for addressing academic doubts. The platform supports both students and tutors, allowing them to engage in real-time doubt resolution.
 
