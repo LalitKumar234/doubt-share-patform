@@ -49,3 +49,6 @@ DoubtSharing is an application designed to facilitate efficient communication be
 
 ## Some Screenshots
 
+<img width="1582" alt="image" src="https://github.com/LalitKumar234/doubt-share-patform/assets/64685787/1a644342-d309-421b-93fb-76aff524b13a">
+
+<img width="1582" alt="image" src="https://github.com/LalitKumar234/doubt-share-patform/assets/64685787/4efa3a64-7e1b-4819-9977-130500cbbffc">
