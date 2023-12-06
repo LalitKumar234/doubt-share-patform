@@ -1,4 +1,4 @@
-# DoubtSharing App
+# DoubtSharing App ![MongoDB](https://img.shields.io/badge/MongoDB-%234ea94b.svg?style=for-the-badge&logo=mongodb&logoColor=white)
 
 DoubtSharing is an application designed to facilitate efficient communication between students and tutors for addressing academic doubts. The platform supports both students and tutors, allowing them to engage in real-time doubt resolution.
 
@@ -52,3 +52,6 @@ DoubtSharing is an application designed to facilitate efficient communication be
 <img width="1582" alt="image" src="https://github.com/LalitKumar234/doubt-share-patform/assets/64685787/1a644342-d309-421b-93fb-76aff524b13a">
 
 <img width="1582" alt="image" src="https://github.com/LalitKumar234/doubt-share-patform/assets/64685787/4efa3a64-7e1b-4819-9977-130500cbbffc">
+
+<img width="1582" alt="image" src="https://github.com/LalitKumar234/doubt-share-patform/assets/64685787/4b14d0f0-5a25-49a5-add7-947833b4c65c">
+
